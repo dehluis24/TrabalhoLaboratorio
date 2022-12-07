@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.PrincipalController">
+  <tabs>
+    <Tab text="Agendamento">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TextField fx:id="tfIdAgendamento" layoutX="15.0" layoutY="15.0" prefHeight="25.0" prefWidth="170.0" promptText="Digite o ID do Agendamento" />
+                  <TextField fx:id="tfCpfAgendamento" layoutX="15.0" layoutY="45.0" prefHeight="25.0" prefWidth="170.0" promptText="Digite o CPF do Cliente" />
+                  <TextField fx:id="tfIdPetAgendamento" layoutX="15.0" layoutY="75.0" prefHeight="25.0" prefWidth="170.0" promptText="Digite o ID do Pet" />
+                  <TextField fx:id="tfHorarioAgendamento" layoutX="15.0" layoutY="135.0" prefHeight="25.0" prefWidth="170.0" promptText="Digite o horário" />
+                  <TextField fx:id="tfDataAgendamento" layoutX="15.0" layoutY="105.0" prefHeight="25.0" prefWidth="170.0" promptText="Digite a data " />
+                  <ScrollPane layoutX="15.0" layoutY="205.0">
+                     <content>
+                        <TextArea fx:id="taListaAgendamento" prefHeight="145.0" prefWidth="570.0" />
+                     </content>
+                  </ScrollPane>
+                  <Button fx:id="btnBuscarAgendamento" layoutX="197.0" layoutY="15.0" mnemonicParsing="false" onAction="#acaoAgendamento" text="Buscar" />
+                  <Button fx:id="btnExcluirAgendamento" layoutX="535.0" layoutY="165.0" mnemonicParsing="false" onAction="#acaoAgendamento" text="Excluir" />
+                  <Button fx:id="btnAlterarAgendamento" layoutX="477.0" layoutY="165.0" mnemonicParsing="false" onAction="#acaoAgendamento" text="Alterar" />
+                  <Button fx:id="btnListarAgendamento" layoutX="425.0" layoutY="165.0" mnemonicParsing="false" onAction="#acaoAgendamento" text="Listar" />
+                  <Button fx:id="btnAgendar" layoutX="356.0" layoutY="165.0" mnemonicParsing="false" onAction="#acaoAgendamento" text="Agendar" />
+                  <TextField fx:id="tfServico" layoutX="15.0" layoutY="165.0" prefHeight="25.0" prefWidth="170.0" promptText="Digite o nome do Serviço" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="Cliente">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TextField fx:id="tfCpfCliente" layoutX="15.0" layoutY="15.0" promptText="Digite o CPF do Cliente" />
+                  <TextField fx:id="tfNomeCliente" layoutX="15.0" layoutY="45.0" promptText="Nome Completo" />
+                  <TextField fx:id="tfTelefoneCliente" layoutX="15.0" layoutY="75.0" promptText="Telefone" />
+                  <TextField fx:id="tfLogradouroCliente" layoutX="15.0" layoutY="105.0" promptText="Logradouro" />
+                  <TextField fx:id="tfNumeroCliente" layoutX="15.0" layoutY="135.0" promptText="Número" />
+                  <TextField fx:id="tfCepCliente" layoutX="15.0" layoutY="165.0" promptText="Cep" />
+                  <TextField fx:id="tfDataNascCliente" layoutX="14.0" layoutY="195.0" promptText="Data de Nascimento" />
+                  <ScrollPane layoutX="15.0" layoutY="232.0">
+                     <content>
+                        <TextArea fx:id="taListaCliente" prefHeight="125.0" prefWidth="570.0" />
+                     </content>
+                  </ScrollPane>
+                  <Button fx:id="btnBuscarCliente" layoutX="175.0" layoutY="15.0" mnemonicParsing="false" onAction="#acaoCliente" text="Buscar" />
+                  <Button fx:id="btnExcluirCliente" layoutX="534.0" layoutY="195.0" mnemonicParsing="false" onAction="#acaoCliente" text="Excluir" />
+                  <Button fx:id="btnAlterarCliente" layoutX="473.0" layoutY="195.0" mnemonicParsing="false" onAction="#acaoCliente" text="Alterar" />
+                  <Button fx:id="btnListarCliente" layoutX="420.0" layoutY="195.0" mnemonicParsing="false" onAction="#acaoCliente" text="Listar" />
+                  <Button fx:id="btnCadastrarCliente" layoutX="343.0" layoutY="195.0" mnemonicParsing="false" onAction="#acaoCliente" text="Cadastrar" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+      <Tab text="Pet">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TextField fx:id="tfIdPet" layoutX="15.0" layoutY="15.0" promptText="ID do Pet" />
+                  <TextField fx:id="tfCpfPet" layoutX="15.0" layoutY="45.0" promptText="CPF do Dono" />
+                  <TextField fx:id="tfNomePet" layoutX="15.0" layoutY="75.0" promptText="Nome do Pet" />
+                  <TextField fx:id="tfPesoPet" layoutX="15.0" layoutY="105.0" promptText="Peso" />
+                  <TextField fx:id="tfAlergiaPet" layoutX="15.0" layoutY="135.0" promptText="Alergia" />
+                  <TextField fx:id="tfSanguePet" layoutX="15.0" layoutY="165.0" promptText="Tipo Sanguineo" />
+                  <ScrollPane layoutX="15.0" layoutY="204.0">
+                     <content>
+                        <TextArea fx:id="taListaPet" prefHeight="151.0" prefWidth="570.0" />
+                     </content>
+                  </ScrollPane>
+                  <Button fx:id="btnBuscarPet" layoutX="175.0" layoutY="15.0" mnemonicParsing="false" onAction="#acaoPet" text="Buscar" />
+                  <Button fx:id="btnExcluirPet" layoutX="533.0" layoutY="165.0" mnemonicParsing="false" onAction="#acaoPet" text="Excluir" />
+                  <Button fx:id="btnAlterarPet" layoutX="472.0" layoutY="165.0" mnemonicParsing="false" onAction="#acaoPet" text="Alterar" />
+                  <Button fx:id="btnListarPet" layoutX="419.0" layoutY="165.0" mnemonicParsing="false" onAction="#acaoPet" text="Listar" />
+                  <Button fx:id="btnCadastrarPet" layoutX="342.0" layoutY="165.0" mnemonicParsing="false" onAction="#acaoPet" text="Cadastrar" />
+               </children></AnchorPane>
+        </content>
+      </Tab>
+  </tabs>
+</TabPane>
